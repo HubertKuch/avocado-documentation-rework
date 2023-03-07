@@ -44,15 +44,14 @@ function Main() {
                         Faster development time by many features provided by Avocado like data source drivers, dependency injection, rest controllers, leafs and more.
                         You can create your own application easy way, without frustrating about old PHP methods.
                     </span>
-                    <br /><br/>
+                    <br/><br/>
                     <span>
                         You can easily declare REST controllers with only annotation, without creating any instances, writing logic to use it. You only declare a controller class,
                         annotate it and it's all, voilà.
                     </span>
                 </div>
-                    <CodeSnippet language={"php"} title={"index.php"}>
-                        {`
-#[Avocado]
+                <CodeSnippet language={"php"} title={"index.php"}>
+                    {`#[Avocado]
 #[RestController]
 class DemoApplication {
 
@@ -65,9 +64,50 @@ class DemoApplication {
         return ["Hello world"];
     }
 }`}
-                    </CodeSnippet>
+                </CodeSnippet>
             </section>
         </section>
+        <footer>
+            <section className={"contact"}>
+                <div>
+                    <a href="tel:+48 730 071 565">
+                        +48 730 071 565
+                    </a>
+                </div>
+                <div>
+                    <a href="mailto:kuchhubert@gmail.com">kuchhubert@gmail.com</a>
+                </div>
+            </section>
+            <section className={"repository"}>
+                <div>
+                    <a href="">
+                        Repository
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        MySQL driver
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        PostgresSQL Driver
+                    </a>
+                </div>
+            </section>
+            <section className={"github"}>
+                <div>
+                    <a href="">
+                        My portfolio
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        My GitHub
+                    </a>
+                </div>
+            </section>
+        </footer>
     </div>);
 }
 

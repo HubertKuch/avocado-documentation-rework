@@ -10,6 +10,7 @@ body, html, #root, .App {
     background: var(--background);
     color: var(--main-font-color);
     font-family: var(--main-font);
+    -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
 }
@@ -40,7 +41,20 @@ body, html, #root, .App {
     flex-direction: row;
     text-align: center;
     justify-items: center;
+    justify-content: space-between;
     gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 20%);
+    z-index: 1000000;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.main-header__icons svg {
+    fill: white;
 }
 
 .framework-name {
@@ -76,6 +90,10 @@ div#search {
     height: 100%;
 }
 
+.project-section a, .project-section a:hover {
+    color: var(--background);
+}
+
 .project-section h1 {
     font-size: clamp(2rem + 2.50vw, 4rem, 1rem);
     background: var(--main-title-gradient);
@@ -93,7 +111,7 @@ div#search {
 
 .features-section {
     width: 100%;
-    height: 100%;
+    height: fit-content;
 }
 
 .features {
@@ -130,10 +148,6 @@ div#search {
 pre, code {
     font-weight: 600;
     line-height: 1.2;
-}
-
-.framework-shorthand pre {
-
 }
 
 section.framework-shorthand {
@@ -187,5 +201,28 @@ button:hover {
 a, a:hover, a:visited {
     cursor: pointer;
     text-decoration: none;
-    color: var(--background)
+    transition: color 200ms ease;
+}
+
+a:hover {
+    color: var(--darker-green);
+}
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 20%);
+    height: fit-content;
+    padding: 50px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+    font-size: 18px;
+    bottom: 0;
+}
+
+footer a {
+    color: var(--main-font-color);
+}
+
+footer section {
+    margin: 0;
 }
