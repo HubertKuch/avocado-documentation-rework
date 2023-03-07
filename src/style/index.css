@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 @import "variables.css";
+@import "responsive.css";
 
 body, html, #root, .App {
     width: 100%;
@@ -31,7 +32,8 @@ body, html, #root, .App {
 .main-header {
     width: 100%;
     height: 10%;
-    position: relative;
+    position: fixed;
+    background: var(--background);
     padding: 2px;
     display: flex;
     flex-direction: row;
@@ -70,7 +72,7 @@ div#search {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
 
 .project-section h1 {
@@ -85,4 +87,58 @@ div#search {
 .project-section h4 {
     font-size: 16px;
     font-family: "Inter Light", sans-serif;
+    color: var(--darker-font);
+}
+
+.features-section {
+    width: 100%;
+    height: 100%;
+}
+
+.features {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+}
+
+.feature {
+    background: var(--components-gray);
+    display: grid;
+    padding: 10px;
+    grid-template-rows: 20% 80%;
+    gap: 0;
+    border-radius: 10px;
+    height: 120px;
+    width: 80%;
+}
+
+.feature h1 {
+    font-size: 24px;
+    margin: 0;
+    color: var(--main-font-color);
+}
+
+.feature span {
+    color: var(--darker-font);
+    font-size: 16px;
+    padding: 0 0 0 10px;
+}
+
+.framework-shorthand pre {
+    background: var(--components-gray) !important;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+section.framework-shorthand {
+    display: grid;
+    padding: 40px;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 100%;
+}
+
+.framework-shorthand .fast-development-time {
 }
