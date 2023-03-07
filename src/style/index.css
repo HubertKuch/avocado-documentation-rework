@@ -55,6 +55,7 @@ body, html, #root, .App {
 
 .main-header__icons svg {
     fill: white;
+    padding: 15px;
 }
 
 .framework-name {

@@ -1,4 +1,5 @@
 import React from "react";
+import GitHubIcon from "./icons/GitHubIcon";
 
 export default function Footer() {
     return (
@@ -15,29 +16,29 @@ export default function Footer() {
             </section>
             <section className={"repository"}>
                 <div>
-                    <a href="">
+                    <a href="https://github.com/HubertKuch/Avocado.git" target={"_blank"} rel="noreferrer">
                         Repository
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a href="https://github.com/HubertKuch/avocado-mysql-driver.git" target={"_blank"} rel="noreferrer">
                         MySQL driver
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a href="https://github.com/HubertKuch/avocado-postgresql-driver.git" target={"_blank"} rel="noreferrer">
                         PostgresSQL Driver
                     </a>
                 </div>
             </section>
             <section className={"github"}>
                 <div>
-                    <a href="">
+                    <a href="https://hubertkuch.pl" target={"_blank"} rel="noreferrer">
                         My portfolio
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a href="https://github.com/HubertKuch" target={"_blank"} rel="noreferrer">
                         My GitHub
                     </a>
                 </div>
