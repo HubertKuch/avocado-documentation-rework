@@ -80,6 +80,13 @@ div#search {
     height: 20px;
     display: inline-block;
     margin: auto 0 auto;
+    cursor: pointer;
+    width: 75px;
+    transition: width 350ms linear;
+}
+
+div#search:hover {
+    width: 100px;
 }
 
 .project-section {
