@@ -9,6 +9,17 @@
         grid-template-columns: 40% 60% !important;
         gap: 10px;
     }
+
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        height: 15%;
+    }
+
+    footer .author {
+        grid-row: 5/6;
+        grid-column: 1/4;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -25,8 +36,5 @@
     .fast-development-time {
         margin: 0 0 0 150px;
         width: 50%;
-    }
-
-    .framework-shorthand pre {
     }
 }
