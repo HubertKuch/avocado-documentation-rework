@@ -14,6 +14,18 @@ function Main() {
                 <h4>
                     for building scalable web apps in PHP, based on drivers and classes
                 </h4>
+                <div>
+                    <button>
+                        <a href="">
+                            Why Avocado?
+                        </a>
+                    </button>
+                    <button>
+                        <a href="">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
             </div>
         </section>
         <section className={"features-section"}>

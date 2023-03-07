@@ -166,5 +166,26 @@ section.framework-shorthand {
     padding: 7px;
 }
 
-.framework-shorthand .fast-development-time {
+button {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    margin: 10px;
+    border-radius: 7px;
+    background: var(--darker-green);
+    transition: background-color 300ms ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--regular-green);
+}
+
+a, a:hover, a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--background)
 }
