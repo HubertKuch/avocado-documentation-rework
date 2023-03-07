@@ -1,8 +1,7 @@
 import Header from "../components/Header";
 import Feature from "../components/Feature";
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/dist/cjs/light";
-import {atomOneDark as theme} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import CodeSnippet from "../components/CodeSnippet";
 
 function Main() {
     return (<div className="App">
@@ -31,29 +30,30 @@ function Main() {
                     <h2>Fast development time</h2>
                     <span>
                         Faster development time by many features provided by Avocado like data source drivers, dependency injection, rest controllers, leafs and more.
-                        <br/><br/>
                         You can create your own application easy way, without frustrating about old PHP methods.
                     </span>
+                    <br /><br/>
+                    <span>
+                        You can easily declare REST controllers with only annotation, without creating any instances, writing logic to use it. You only declare a controller class,
+                        annotate it and it's all, voilà.
+                    </span>
                 </div>
-                <div>
-                    <SyntaxHighlighter language={"php"} style={theme}>
+                    <CodeSnippet language={"php"} title={"index.php"}>
                         {`
 #[Avocado]
 #[RestController]
 class DemoApplication {
 
-    public static function run(): void {    
-        Application::init(__DIR__);
+    public static function run(): void {
+        Application::run(__DIR__);
     }
- 
+
     #[GetMapping("/")]
-    public function hello(): string {
-        return "Hello world";
-    }   
-}                    
-                        `}
-                    </SyntaxHighlighter>
-                </div>
+    public function hello(): array {
+        return ["Hello world"];
+    }
+}`}
+                    </CodeSnippet>
             </section>
         </section>
     </div>);

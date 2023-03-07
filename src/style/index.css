@@ -11,6 +11,7 @@ body, html, #root, .App {
     color: var(--main-font-color);
     font-family: var(--main-font);
     -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -126,11 +127,13 @@ div#search {
     padding: 0 0 0 10px;
 }
 
+pre, code {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
 .framework-shorthand pre {
-    background: var(--components-gray) !important;
-    font-size: 18px;
-    width: 100%;
-    border-radius: 5px;
+
 }
 
 section.framework-shorthand {
@@ -138,6 +141,29 @@ section.framework-shorthand {
     padding: 40px;
     grid-template-rows: 40% 60%;
     grid-template-columns: 100%;
+}
+
+.code-snippet {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 90%;
+    border-radius: 5px;
+}
+
+.code-snippet pre {
+    background: var(--components-gray) !important;
+    font-size: 18px;
+    margin-top: 0;
+    height: fit-content;
+}
+
+.code-snippet .title {
+    background: var(--components-gray-darker);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    max-width: 100%;
+    padding: 7px;
 }
 
 .framework-shorthand .fast-development-time {
