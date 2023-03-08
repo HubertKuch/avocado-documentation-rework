@@ -7,7 +7,9 @@ export default function Header() {
         <header className={"main-header"}>
             <div className={"logo-container"}>
                 <img className={"logo inline"} src={AvocadoLogo} alt={"Avocado, logo"}/>
-                <span className={"framework-name"}><span className={"regular-green"}>A</span>vocado</span>
+                    <span className={"framework-name"}>
+                        <a style={{color: "white"}} href="/"><span className={"regular-green"}>A</span>vocado</a>
+                    </span>
             </div>
             <div className={"main-header__icons"}>
                     <GitHubIcon />

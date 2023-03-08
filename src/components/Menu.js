@@ -6,6 +6,9 @@ export default function Menu() {
                 <li>
                     <a href="/docs/global/get-started">🛫 Get started</a>
                 </li>
+                <li>
+                    <a href="/docs/global/rest-controllers">🎮 Rest controllers</a>
+                </li>
             </ul>
         </nav>)
 }

@@ -62,7 +62,7 @@ function Main() {
                         </a>
                     </button>
                     <button>
-                        <a href="">
+                        <a href="/docs/global/get-started">
                             Get Started
                         </a>
                     </button>
