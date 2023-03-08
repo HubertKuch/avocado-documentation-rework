@@ -2,6 +2,13 @@
 @import "variables.css";
 @import "responsive.css";
 
+@font-face {
+    font-family: "Liberation Mono", sans-serif;
+    src: url("./fonts/LiberationMono-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, html, #root, .App {
     width: 100%;
     height: 100%;
@@ -56,6 +63,7 @@ body, html, #root, .App {
 .main-header__icons svg {
     fill: white;
     padding: 15px;
+    height: 32px;
 }
 
 .framework-name {
@@ -89,13 +97,17 @@ div#search:hover {
     width: 100px;
 }
 
+main {
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+}
+
 .project-section {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
 .project-section a, .project-section a:hover {
@@ -154,8 +166,10 @@ div#search:hover {
 }
 
 pre, code {
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: "Liberation Mono", sans-serif !important;
+    font-weight: 400 !important;
 }
 
 section.framework-shorthand {
@@ -280,4 +294,60 @@ footer .author {
     height: max-content;
     display: block;
     position: relative;
+}
+
+nav {
+    z-index: 10000000;
+    background: var(--background);
+    border: 1px solid var(--darker-green);
+    display: block;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+ul {
+    list-style: none;
+    font-size: 20px;
+}
+
+li {
+    line-height: 1.4;
+    user-select: none;
+}
+
+li a {
+    color: var(--main-font-color);
+}
+
+pre {
+    white-space: pre;
+}
+
+.docs-view pre {
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.docs-view {
+    height: fit-content;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter Regular", sans-serif;
+    font-weight: 600;
+    letter-spacing: -.02em;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p, span {
+    font-family: "Inter Regular", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }

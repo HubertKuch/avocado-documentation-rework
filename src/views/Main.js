@@ -47,7 +47,7 @@ function Main() {
 
     return (<div className="App">
         <Header/>
-        <section className={"project-section"}>
+        <main className={"project-section"}>
             <div>
                 <h1>
                     Progressive PHP framework
@@ -68,7 +68,7 @@ function Main() {
                     </button>
                 </div>
             </div>
-        </section>
+        </main>
         <section className={"features-section"}>
             <section className={"features"}>
                 <Feature title={"Testable"} description={"Support for TDD, easy e2e tests."}/>

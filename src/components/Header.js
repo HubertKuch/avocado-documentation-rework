@@ -4,18 +4,18 @@ import SearchBar from "./SearchBar";
 import GitHubIcon from "./icons/GitHubIcon";
 
 export default function Header() {
-    return (
+    return (<>
         <header className={"main-header"}>
             <div className={"logo-container"}>
-                <img className={"logo inline"} src={AvocadoLogo}  alt={"Avocado, logo"}/>
+                <img className={"logo inline"} src={AvocadoLogo} alt={"Avocado, logo"}/>
                 <span className={"framework-name"}><span className={"regular-green"}>A</span>vocado</span>
-                <SearchBar />
+                <SearchBar/>
             </div>
             <div className={"main-header__icons"}>
-                <a target={"_blank"} href="https://github.com/HubertKuch/Avocado.git">
-                    <GitHubIcon />
+                <a target={"_blank"} href="https://github.com/HubertKuch/Avocado.git" rel="noreferrer">
+                    <GitHubIcon/>
                 </a>
             </div>
         </header>
-    );
+    </>);
 }
