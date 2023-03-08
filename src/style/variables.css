@@ -10,4 +10,8 @@
     --darker-font: #BFBFBF;
     --main-title-gradient: radial-gradient(81.82% 81.82% at 51.53% 49.35%, #98F2A7 0%, #69D67A 47.92%, #9AD14B 59.9%, #8E7B5E 100%);
     --regular-blue: #5ea8e5;
+    --nav-width: 240px;
+    --header-height: 80px;
+    --on-this-page-width: 150px;
+    --regular-red: #ff6158;
 }

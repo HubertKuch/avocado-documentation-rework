@@ -9,6 +9,10 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body, html, #root, .App {
     width: 100%;
     height: 100%;
@@ -19,7 +23,7 @@ body, html, #root, .App {
     font-family: var(--main-font);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -40,8 +44,7 @@ body, html, #root, .App {
 
 .main-header {
     width: 100%;
-    height: 10%;
-    position: fixed;
+    height: var(--header-height);
     background: var(--background);
     padding: 2px;
     display: flex;
@@ -64,6 +67,7 @@ body, html, #root, .App {
     fill: white;
     padding: 15px;
     height: 32px;
+    box-sizing: unset;
 }
 
 .framework-name {
@@ -100,7 +104,6 @@ div#search:hover {
 main {
     width: 100%;
     height: 100%;
-    padding-top: 100px;
 }
 
 .project-section {
@@ -278,7 +281,7 @@ footer .author {
 }
 
 .multi-code-snippet .title {
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .multi-code-snippet .title span {
@@ -297,20 +300,19 @@ footer .author {
 }
 
 nav {
-    z-index: 10000000;
+    display: none;
+    z-index: 10000;
     background: var(--background);
-    border: 1px solid var(--darker-green);
-    display: block;
+    border-right: 1px solid var(--darker-green);
     position: fixed;
-    top: 80px;
-    right: 20px;
-    border-radius: 5px;
-    width: 80%;
+    top: var(--header-height);
+    left: 0;
+    width: var(--nav-width);
+    height: 100%;
 }
 
 ul {
     list-style: none;
-    font-size: 20px;
 }
 
 li {
@@ -329,7 +331,9 @@ pre {
 .docs-view pre {
     padding: 10px;
     border-radius: 10px;
-    width: fit-content;
+    width: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
 }
 
 .docs-view {
@@ -350,4 +354,41 @@ p, span {
     font-family: "Inter Regular", sans-serif;
     font-weight: 400;
     font-size: 16px;
+}
+
+.docs__main {
+    display: block;
+    margin: 0;
+    height: auto;
+    padding: var(--header-height) 20px 0;
+}
+
+.heading-anchor {
+    color: var(--regular-red) !important;
+}
+
+.docs__main a {
+    color: var(--regular-blue);
+}
+
+.on-this-page {
+    display: none;
+    position: fixed;
+    top: calc(var(--header-height) + 40px);
+    right: 0;
+    width: var(--on-this-page-width);
+}
+
+.on-this-page a {
+    color: white;
+    margin: 5px;
+    transition: opacity 200ms ease;
+}
+
+.on-this-page-title {
+    font-weight: 600;
+}
+
+.on-this-page a:hover {
+    opacity: 0.6;
 }
