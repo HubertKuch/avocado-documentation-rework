@@ -12,6 +12,9 @@ export default function Menu() {
                 <li>
                     <a href="/docs/global/sending-requests-from-frontend">✉ Sending requests from frontend</a>
                 </li>
+                <li>
+                    <a href="/docs/global/sending-requests-from-frontend">♟ Http consumers</a>
+                </li>
             </ul>
         </nav>)
 }
