@@ -13,7 +13,7 @@ export default function Menu() {
                     <a href="/docs/global/sending-requests-from-frontend">✉ Sending requests from frontend</a>
                 </li>
                 <li>
-                    <a href="/docs/global/sending-requests-from-frontend">♟ Http consumers</a>
+                    <a href="/docs/global/http-consumers">♟ Http consumers</a>
                 </li>
             </ul>
         </nav>)
