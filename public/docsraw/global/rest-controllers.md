@@ -27,8 +27,32 @@ class UserController {
 that class will read and instantiated as controller.
 Every controller can has many mapping which are routes/endpoints.
 
-## Mappings
+## Base url annotation
+To set base url for every mapping in rest controller you can use `BaseURL` annotation.
+Consider that example when base uri is `/api/v1/guests`
 
+```php
+#[RestController]
+#[BaseURL("/api/v1/guests")]
+class GuestController {
+    #[Autowired]
+    private GuestService $guestService;
+    
+    // path will be `/api/v1/guests/`
+    #[GetMapping("/")]
+    public function getGuests(): array {
+        return $this->guestService->getAll();    
+    }
+    
+    // path will be `/api/v1/guests/:name/`
+    #[GetMapping("/:name/")]
+    public function getGuestByName(#[RequestParam(name: "name")] string $name): Guest {
+        return $this->guestService->getByName($name);
+    }
+}
+```
+
+## Mappings
 Types of mapping:
 
 - GET

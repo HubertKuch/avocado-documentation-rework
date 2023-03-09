@@ -9,6 +9,9 @@ export default function Menu() {
                 <li>
                     <a href="/docs/global/rest-controllers">🎮 Rest controllers</a>
                 </li>
+                <li>
+                    <a href="/docs/global/sending-requests-from-frontend">✉ Sending requests from frontend</a>
+                </li>
             </ul>
         </nav>)
 }
