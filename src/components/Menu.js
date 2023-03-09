@@ -15,6 +15,9 @@ export default function Menu() {
                 <li>
                     <a href="/docs/global/http-consumers">♟ Http consumers</a>
                 </li>
+                <li>
+                    <a href="/docs/global/middleware">🧩Middleware</a>
+                </li>
             </ul>
         </nav>)
 }
