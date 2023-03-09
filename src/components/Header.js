@@ -15,5 +15,9 @@ export default function Header() {
                     <GitHubIcon />
             </div>
         </header>
+        {/*<section className={"header-nav"}>*/}
+        {/*    <div>Menu</div>*/}
+        {/*    <div>Go to top</div>*/}
+        {/*</section>*/}
     </>);
 }
