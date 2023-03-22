@@ -1,30 +1,30 @@
 # Http consumers in Avocado
 
-Avocado gives us `HttpConsumer` interface and internal implementation which is used
-by default. That interface allows us to implement own http managers.
+Avocado provides an HttpConsumer interface and an internal implementation that is used by default. This interface allows
+us to implement our own HTTP managers.
 
-In this section we learn more about what is http consumer, how to exclude default implementation
-and how implement our own.
+In this section, we will learn more about what an HTTP consumer is, how to exclude the default implementation, and how
+to implement our own.
 
 ## What is Http consumer?
 
-Http consumer is a simple class with `consume` method which will be invoked with `ResponseBody` parameter on
+An HTTP consumer is a simple class with a consume method that will be invoked with a ResponseBody parameter upon a
 mapping call.
 
-For example `MainHttpConsumer` provides three strategies of working with responses: of `HttpResponse` instance,
-`ResponseBody` instance and raw data for example `User` object, arrays, numbers and everything else related on
-mapping mime type.
+For example, MainHttpConsumer provides three strategies for working with responses: an HttpResponse instance, a
+ResponseBody instance, and raw data, such as a User object, arrays, numbers, and anything else related to mapping MIME
+type.
 
 ## Methods
 
-| Name    | Params       | description                                                             |
-|---------|--------------|-------------------------------------------------------------------------|
-| consume | ResponseBody | Consuming data returned by endpoint invoked on invoked mapping response |
+| Name    | Params       | description                                                                    |
+|---------|--------------|--------------------------------------------------------------------------------|
+| consume | ResponseBody | Consumes data returned by the endpoint invoked on the invoked mapping response |
 
 ## Excluding default consumer
 
-To exclude `MainHttpConsumer` from our app we have to annotate main application class with `Exclude` annotation and
-give `MainHttpConsumer` FQN into excluded array.
+To exclude the MainHttpConsumer from our app, we need to annotate the main application class with the Exclude annotation
+and give the fully qualified name (FQN) of MainHttpConsumer to the excluded array.
 
 ```php
 #[Avocado]
@@ -34,10 +34,10 @@ class PetsApplication {
 }
 ```
 
-## Own implementation
+## Implementing our own HTTP consumer
 
-To implement our own implementation of `HttpConsumer` we need to create class which implements `HttpConsumer`
-and annotate it with `Resource` annotation.
+To implement our own implementation of HttpConsumer, we need to create a class that implements HttpConsumer and annotate
+it with the Resource annotation.
 
 For example:
 
@@ -55,5 +55,6 @@ In this situation every single request will end with HTTP status code `500` and 
 servers are broken.
 
 ## HttpConsumingStrategy interface
-If you want to hold your response consuming strategies in seperated classes 
+
+If you want to hold your response consuming strategies in seperated classes
 you can use `HttpConsumingStrategy` interface and implement it. It isn't required but helps.
